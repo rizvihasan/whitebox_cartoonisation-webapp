@@ -1,6 +1,6 @@
 # WhiteBox Cartoonization using TF.js
 
-An implementation of whitebox cartoonization model using Tensorflow.js and HTML/CSS/Javascript/Bootstrap
+An implementation of Whitebox Cartoonization model using Tensorflow.js and HTML/CSS/Javascript/Bootstrap
 
 Try the application [here](https:
 
