@@ -1,7 +1,7 @@
 tf.setBackend('wasm').then(() => runModel())
 
 const APP = {
-  model: null, size: 800,
+  model: null, size: 600,
   source: document.getElementById('input'),
   canvas: document.getElementById('output'),
   status: document.getElementById('status'),
@@ -58,7 +58,7 @@ function draw(img, size) {
   APP.canvas.classList.remove('d-none')
   APP.canvas.classList.add('d-block')
   APP.status.classList.add('d-none')
-  setTimeout(() => scaleCanvas(scaleby), 500)
+  setTimeout(() => scaleCanvas(scaleby))
 }
 
 function scaleCanvas(pct=2) {
@@ -74,7 +74,7 @@ function scaleCanvas(pct=2) {
   canvas.height *= pct
   const ctx = canvas.getContext('2d')
   ctx.drawImage(tmpcan, 0, 0, cw, ch, 0, 0, cw*pct, ch*pct)
-  APP.download.href = canvas.toDataURL('image/jpeg', 1)
+  APP.download.href = canvas.toDataURL('image/jpeg')
 }
 
 document.getElementById('file').addEventListener('change', evt => {
